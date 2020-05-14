@@ -26,3 +26,6 @@ This setup is not optimized for scaling.
 `web` container being prepared. Use `ssh <your-server> ji-addlogo'` as soon as it is prepared.
 - Persistency across reboots is currently not given but will be added soon. Reactivate a rebooted
 instance with `/opt/app/jitsi/set_iptables; cd /opt/app; docker-compose up -d`
+- It is recommended to have an Elastic IP in place to keep the public address if instances are
+recreated. If you don't want to use it, remove the `/opt/app/tools/set_elastic_address` execution
+from your cloud-config.
