@@ -29,3 +29,7 @@ instance with `/opt/app/jitsi/set_iptables; cd /opt/app; docker-compose up -d`
 - It is recommended to have an Elastic IP in place to keep the public address if instances are
 recreated. If you don't want to use it, remove the `/opt/app/tools/set_elastic_address` execution
 from your cloud-config.
+- If your Web frontend is not working, try to first check if your Web frontend does not work:
+`ssh -t root@<ip> "cd /opt/jitsi; docker-compose logs --tail=100 -f web"`. If it has failed,
+it might be due to a timing error with assigning the elastic IP. Then try to restart the `web`
+service: `ssh -t root@<ip> "cd /opt/jitsi; docker-compose restart web"
