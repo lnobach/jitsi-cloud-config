@@ -2,10 +2,8 @@
         
 iptables -N EXT-TRAFFIC | iptables -F EXT-TRAFFIC
 iptables -A INPUT -i eth0 -j EXT-TRAFFIC
-iptables -A INPUT -i eth0:1 -j EXT-TRAFFIC
 ip6tables -N EXT-TRAFFIC | ip6tables -F EXT-TRAFFIC
 ip6tables -A INPUT -i eth0 -j EXT-TRAFFIC
-ip6tables -A INPUT -i eth0:1 -j EXT-TRAFFIC
        
 iptables -A EXT-TRAFFIC -m state --state ESTABLISHED -j ACCEPT
 iptables -A EXT-TRAFFIC -p icmp -j ACCEPT
