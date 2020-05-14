@@ -4,7 +4,7 @@ package_update: true
 
 runcmd:
     - [ dnf, -y, install, git ]
-    - [ git, clone, 'https://github.com/lnobach/jitsi-cloud-config', -b, leo_test, /opt/app ]
+    - [ git, clone, 'https://github.com/lnobach/jitsi-cloud-config', /opt/app ]
     - [ /opt/app/tools/install_docker_compose ]
     - [ /opt/app/jitsi/install_jitsi_docker, '{{cc_frontend_domain}}', '{{cc_letsencrypt_mail}}' ]
     - [ /opt/app/tools/security_set_ssh ]
