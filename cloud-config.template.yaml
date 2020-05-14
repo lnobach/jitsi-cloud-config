@@ -11,4 +11,3 @@ runcmd:
     - [ /opt/app/jitsi/set_iptables ]
     - [ /opt/app/tools/set_elastic_address, eth0, '{{cc_server_ipv4}}', '{{cc_server_ipv6}}' ]
     - [ /opt/app/jitsi/install_jitsi_cmdlinetools, '{{cc_remote_watermark_image}}' ]
-# /usr/bin/addlogo can only be executed after upstart of web, but no trigger available...
