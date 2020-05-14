@@ -1,6 +1,13 @@
 
+# The v4 and v6 of your Elastic IP
 cc_server_ipv4=
 cc_server_ipv6=
+
+# URL to a remote image which replaces the Jitsi watermark. Can be left blank.
 cc_remote_watermark_image=
+
+# The DNS name of the Web frontend. Required for Let's Encrypt.
 cc_frontend_domain=
+
+# The e-mail address passed to Let's Encrypt.
 cc_letsencrypt_mail=

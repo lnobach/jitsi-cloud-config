@@ -5,12 +5,14 @@ LOGO=$1
 
 cat << EOF > $TARGETDIR/ji-adduser
 #/bin/sh
+cd /opt/jitsi
 docker-compose exec prosody /usr/bin/prosodyctl --config /config/prosody.cfg.lua register \$1 meet.jitsi \$2
 EOF
 chmod 755 $TARGETDIR/ji-adduser
 
 cat << EOF > $TARGETDIR/ji-addlogo
 #/bin/sh
+cd /opt/jitsi
 echo 'location = /images/watermark.png { return 301 ${LOGO}; }' >> /storage/jitsi-meet-cfg/web/nginx/meet.conf
 docker-compose restart web
 EOF
