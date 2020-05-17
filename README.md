@@ -6,7 +6,7 @@ You need a cloud provider supporting user data (cloud-config) input on VM creati
 This setup is not optimized for horizontal scaling for large installations. Consider using Kubernetes in this case.
 
 This setup is targeted to be up to date on creation, but does not maintain automatic lifecycling of Jitsi and 
-dependencies once it is up.
+dependencies (including security patches) once it is up.
 Consider recreating the instance regularly to keep it up to date, which is easy, because it is automated :)
 
 ## How to use - the UI way
