@@ -11,7 +11,7 @@ variable "frontend_domain" {
   description = "The domain name used for frontend access. Required for ACME/Let's Encrypt"
 }
 variable "letsencrypt_mail" {
-  description = "E-mail address passed to Let's Encrypt"
+  description = "E-Mail address passed to Let's Encrypt"
 }
 
 variable "location" {
@@ -25,6 +25,6 @@ variable "name" {
 }
 
 variable "ssh_key_selector" {
-  description = "The SSH key selector which will be used for login See https://docs.hetzner.cloud/#overview-label-selector"
+  description = "The SSH key selector which will be used for login - see https://docs.hetzner.cloud/#overview-label-selector"
   default     = "purpose=admin"
 }
