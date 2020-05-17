@@ -12,7 +12,7 @@ Consider recreating the instance regularly to keep it up to date, which is easy,
 ## How to use - the UI way
 
 - Copy `vars.bash.example` to `vars.bash` and adapt the variables explained there.
-- Run `./make.sh` to generate `cloud.config.yaml`.
+- Run `./make.sh` to generate `cloud-config.yaml`.
 - Create a new Elastic IP (v4 and v6).
 - Let a DNS A and AAAA record point to the Elastic IP.
 - Create a new VM with a CentOS 8 image and supply the content of `cloud-config.yaml` as user data. 
