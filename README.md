@@ -23,7 +23,7 @@ This setup is not optimized for scaling.
 There are Terraform implementations available.
 See `terraform/<provider>/README.md` for details
 
-- [hetzner](terraform/hetzner/README.md)
+- [hetzner](./terraform/hetzner/README.md)
 
 ## Troubleshooting and Insights
 
