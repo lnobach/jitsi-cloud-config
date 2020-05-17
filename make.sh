@@ -6,5 +6,5 @@ cp cloud-config.template.yaml cloud-config.yaml
 for var in ${!cc_@}
 do
     value=${!var}
-    sed -i "s;{{$var}};$value;g" cloud-config.yaml
+    sed -i "s;\${$var};$value;g" cloud-config.yaml
 done

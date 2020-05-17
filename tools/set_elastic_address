@@ -16,7 +16,7 @@ USERCTL=no
 ONBOOT=yes
 EOF
 
-echo "IPV6ADDR_SECONDARIES=${IPV6ADDR}" >> /etc/sysconfig/network-scripts/ifcfg-${IFACE}
+echo "IPV6ADDR_SECONDARIES=${IPV6ADDR}/64" >> /etc/sysconfig/network-scripts/ifcfg-${IFACE}
 
 /usr/sbin/ifdown eth0
 /usr/sbin/ifup eth0
