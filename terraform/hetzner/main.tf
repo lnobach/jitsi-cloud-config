@@ -1,20 +1,3 @@
-variable "hcloud_token" {}
-variable "ssh_key" {}
-variable "remote_watermark_image" {}
-variable "frontend_domain" {}
-variable "letsencrypt_mail" {}
-
-variable "location" {
-  default = "fsn1"
-}
-
-variable "name" {
-  default = "meet"
-}
-
-variable "ssh_key_selector" {
-  default = "purpose=admin"
-}
 
 provider "hcloud" {
   token = var.hcloud_token
@@ -63,20 +46,4 @@ resource "hcloud_floating_ip_assignment" "meet_v4" {
 resource "hcloud_floating_ip_assignment" "meet_v6" {
   floating_ip_id = hcloud_floating_ip.meet_v6.id
   server_id      = hcloud_server.meet.id
-}
-
-output "server_ipv4" {
-  value = hcloud_server.meet.ipv4_address
-}
-
-output "server_ipv6" {
-  value = hcloud_server.meet.ipv6_address
-}
-
-output "float_ipv4" {
-  value = hcloud_floating_ip.meet_v4.ip_address
-}
-
-output "float_ipv6" {
-  value = hcloud_floating_ip.meet_v6.ip_address
 }

@@ -5,7 +5,7 @@ You need a cloud provider supporting user data (cloud-config) input on VM creati
 
 This setup is not optimized for scaling.
 
-## How to use - the simple way
+## How to use - the UI way
 
 - Copy `vars.bash.example` to `vars.bash` and adapt the variables explained there.
 - Run `./make.sh` to generate `cloud.config.yaml`.
@@ -17,6 +17,13 @@ This setup is not optimized for scaling.
 - Register users with `ssh -t <your-server> ji-adduser <username>'` (interactively) or
 `ssh <your-server> ji-adduser <username> <password>` (non-interactively).
 - Enjoy your Jitsi Meet via Web using your DNS name :)
+
+## How to use - the Terraform way
+
+There are Terraform implementations available.
+See `terraform/<provider>/README.md` for details
+
+- [hetzner](terraform/hetzner/README.md)
 
 ## Troubleshooting and Insights
 
