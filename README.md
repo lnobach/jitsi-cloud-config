@@ -28,7 +28,7 @@ Consider recreating the instance regularly to keep it up to date, which is easy,
 There are Terraform implementations available.
 See `terraform/<provider>/README.md` for details.
 
-- [hetzner - Hetzner Cloud](./terraform/hetzner/README.md)
+- [hetzner - Hetzner Cloud](./terraform/hetzner)
 
 ## Troubleshooting and Insights
 
