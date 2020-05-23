@@ -5,9 +5,9 @@ package_update: true
 runcmd:
     - [ dnf, -y, install, git ]
     - [ git, clone, 'https://github.com/lnobach/jitsi-cloud-config', /opt/app ]
-    - [ /opt/app/tools/install_docker_compose ]
-    - [ /opt/app/jitsi/install_jitsi_docker, '${cc_frontend_domain}', '${cc_letsencrypt_mail}' ]
     - [ /opt/app/tools/security_set_ssh ]
     - [ /opt/app/jitsi/set_iptables ]
     - [ /opt/app/tools/set_elastic_address, eth0, '${cc_server_ipv4}', '${cc_server_ipv6}' ]
+    - [ /opt/app/tools/install_docker_compose ]
+    - [ /opt/app/jitsi/install_jitsi_docker, '${cc_frontend_domain}', '${cc_letsencrypt_mail}' ]
     - [ /opt/app/jitsi/install_jitsi_cmdlinetools, '${cc_remote_watermark_image}' ]
