@@ -4,12 +4,13 @@ The mini infrastructure will consist of a single VM and two elastic IPs (IPv4 an
 
 ## How to bring up and update
 
+Ensure you have added one or multiple SSH keys in your Hetzner account with the tag `purpose=admin`.
+
 ```
 export TF_VAR_hcloud_token="<insert your Hetzner token>"
 export TF_VAR_remote_watermark_image="https://my.domain/images/my-logo.svg"
 export TF_VAR_frontend_domain="meet.my.domain"
 export TF_VAR_letsencrypt_mail="mail@my.domain"
-export TF_VAR_ssh_key="ssh-rsa quuxquuux..."
 
 terraform init
 terraform apply
