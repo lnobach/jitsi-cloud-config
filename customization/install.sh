@@ -18,7 +18,7 @@ fi
 
 # === Patch docker-compose.yaml
 
-EVALSTR='.services.web.volumes += ["/opt/app/customize/customize.sh:/etc/cont-init.d/90-customweb:ro"] | .services.web.environment += ["CUSTOMIZE_BASE"]'
+EVALSTR='.services.web.volumes += ["/opt/app/customization/customize.sh:/etc/cont-init.d/90-customweb:ro"] | .services.web.environment += ["CUSTOMIZE_BASE"]'
 
 cp -n /opt/jitsi/docker-compose.yml /opt/jitsi/docker-compose-orig.yml || true
 yq eval "$EVALSTR" \
