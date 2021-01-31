@@ -13,3 +13,4 @@ function getCustomResource() {
 
 getCustomResource favicon.ico /usr/share/jitsi-meet/images/favicon.ico
 getCustomResource watermark.png /usr/share/jitsi-meet/images/watermark.png
+getCustomResource watermark.svg /usr/share/jitsi-meet/images/watermark.svg
